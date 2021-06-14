@@ -1,0 +1,48 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+
+
+
+// Variables
+@import 'variables';
+
+//$fa-font-path: "../webfonts";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Staatliches&display=swap');
+
+.respectabel, .betrouwbaar, .autoriteit{
+    font-family: 'Roboto Slab', sans-serif !important;
+}
+
+.schoon, .modern{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.modieus, .elegant{
+    font-family: 'Big Shoulders Display', sans-serif !important;
+}
+
+.creatief, .vriendelijk{
+    font-family: 'Permanent Marker', sans-serif !important;
+}
+
+.gedurfd, .krachtig{
+    font-family: 'Staatliches', sans-serif !important;
+}
