@@ -19,17 +19,26 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## Getting started
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+* Als je op windows bent heb je XAMPP nodig, dit kan je downloaden op deze url: 
+https://www.apachefriends.org/download.html
+* Maak via XAMPP een MySQL database en noem dit myway (Carachter collation 
+staat standaart op utf8mb4_unicode_ci, wijzig dit anders).
+* Download composer om met laravel te werken via deze url: 
+https://getcomposer.org/download/
+* Open het project in een gewenste editor.
+* Verwijder het oude .env bestand en hernoem .env.example naar .env. Voer hier de 
+gegevens van jouw database tabel (indien dit niet lukt open kladblok in 
+administrator en open hierin de .env bestand en sla op).
+* Start een nieuwe project op firebase via https://firebase.google.com/.
+(Deze stap mag je skippen, ik laat mijn firebase storage credentials in het project).
+* Ga naar app.js onder de folder resources\ en wijzig hier de gegevens.* Start een nieuwe terminal en cd naar de hoofdmap.
+* Voer het commando “composer install” uit.
+* Voer het commando “php artisan migrate” uit.
+* Voer het commando “php artisan db:seed” uit.
+* Voer het commando “npm install” uit.
+* Open en nieuwe terminal.
+* Voer het commando “php artisan serve” uit.
+Ga naar jouw browser en navigeer naar http://localhost:8000/
 
 ## Waar kan ik hulp vinden?
 
