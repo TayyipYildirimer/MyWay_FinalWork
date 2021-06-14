@@ -9,9 +9,9 @@ webapplicatie ook een platform waar men creatieve geesten kunnen opzoeken.
 
 ## Technologieën
 
-Vue.js 2.6.14
-Laravel 8.39.0
-npm 6.13.4
+* Vue.js 2.6.14
+* Laravel 8.39.0
+* npm 6.13.4
 
 ## Getting started
 
