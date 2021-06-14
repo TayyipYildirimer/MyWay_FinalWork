@@ -19,17 +19,12 @@
                       Zoekplatform
                   </a>
               </li>
-              <li>
-                  <a class="btn-nav" href="#">
-                      Prijzen
-                  </a>
-              </li>
               <li v-if="authUser === null" style="margin-left:200px;">
                   <a class="btn-nav" href="/login">
                       Inloggen
                   </a>
               </li>
-              <li v-if="authUser != null" style="margin-left:200px;">
+              <li v-if="authUser != null" style="margin-left:100px;">
                   <a class="btn-nav" :href="`/portfolio/${authUser.id}`">
                       Mijn portfolio
                   </a>

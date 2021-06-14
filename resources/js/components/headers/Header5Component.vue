@@ -66,7 +66,7 @@
             return {
               styleObject: {
                   background: 'black',
-              },//this.user.imgColors[this.colorDarkNumber]
+              },
               colorDark: false,
               colorDarkNumber: 0,
               colorLight: false,

@@ -1,11 +1,19 @@
 <template>
-  <div>
+  <div style="min-height:85vh; margin:auto;">
     <form
       method="POST"
       enctype="multipart/form-data"
       @submit.prevent="submitWizard"
-      style="max-width: 550px; margin: 0 auto;"
+      style="min-width: 600px;position:absolute;transform:translate(-50%,-50%);left:50%;top:55%;"
     >
+
+      <v-stepper
+        style="
+          background-color: #2ba9e1 !important;-
+        "
+        v-model="e1"
+      >
+      
       <v-stepper-header style="box-shadow: none !important">
         <v-stepper-step :complete="e1 > 1" step="1" color="#2BA9E1">
         </v-stepper-step>
@@ -44,13 +52,6 @@
 
         <v-stepper-step step="9" color="#2BA9E1"> </v-stepper-step>
       </v-stepper-header>
-
-      <v-stepper
-        style="
-          background-color: #2ba9e1 !important;
-        "
-        v-model="e1"
-      >
         <v-stepper-items>
           <v-stepper-content step="1">
             <v-card
@@ -66,11 +67,12 @@
                   Welke soort creatieve ben je?
                 </h3>
                 <select
+                  required
                   class="form-control"
                   id="category"
                   v-model="formData.category"
                 >
-                  <option style="color: #cacaca">Select a category</option>
+                  <option value="" disabled selected>Select a category</option>
                   <option value="fotograaf">Fotograaf</option>
                   <option value="designer">Designer</option>
                   <option value="developer">Developer</option>
@@ -111,7 +113,7 @@
                   id="specialization"
                   v-model="formData.specialization"
                 >
-                  <option style="color: #cacaca">
+                  <option value="" disabled selected>
                     Select your specialization
                   </option>
                   <option value="persfotografie">Persfotografie</option>
@@ -169,7 +171,7 @@
               @click="e1 = 1"
               text
             >
-              Previous
+              Vorige
             </v-btn>
             <v-btn
               style="
@@ -196,14 +198,14 @@
                 <h3
                   style="color: white; text-align: center; margin-bottom: 1em"
                 >
-                  Welke emotie past het best bij jouw?
+                  Welke emotie roept u bij anderen op?
                 </h3>
                 <select
                   class="form-control"
                   id="emotions"
                   v-model="formData.emotions"
                 >
-                  <option style="color: #cacaca">Duid jouw emoties aan</option>
+                  <option value="" disabled selected>Duid jouw emoties aan</option>
                   <option value="respectabel">Respectabel</option>
                   <option value="betrouwbaar">Betrouwbaar</option>
                   <option value="autoriteit">Autoriteit</option>
@@ -224,7 +226,7 @@
               @click="e1 = 2"
               text
             >
-              Previous
+              Vorige
             </v-btn>
             <v-btn
               style="
@@ -272,7 +274,7 @@
               @click="e1 = 3"
               text
             >
-              Previous
+              Vorige
             </v-btn>
             <v-btn
               style="
@@ -331,7 +333,7 @@
               @click="e1 = 4"
               text
             >
-              Previous
+              Vorige
             </v-btn>
             <v-btn
               style="
@@ -380,7 +382,7 @@
               @click="e1 = 5"
               text
             >
-              Previous
+              Vorige
             </v-btn>
             <v-btn
               style="
@@ -421,7 +423,7 @@
                   @change="previewImage"
                 />
 
-                <label for="profileimg" style="display: block">
+                <label for="profileimg" style="display: block; cursor:pointer;">
                   <img
                     :src="profilePhotoPreview"
                     alt="preview"
@@ -446,7 +448,7 @@
               @click="e1 = 6"
               text
             >
-              Previous
+              Vorige
             </v-btn>
             <v-btn
               style="
@@ -480,10 +482,9 @@
                   Kies verschillende afbeeldingen dat je op jouw portfolio wil
                   laten tonen
                 </h3>
-
                 <label
                   for="otherImages"
-                  style="display: block; margin-left: auto; margin-right: auto"
+                  style="display: block; margin-left: auto; padding: 1.5em; margin-right: auto; border-radius: 7px; cursor: pointer;"
                   class="text-center btn-nav"
                 >
                   add images ( {{ otherPhotoPreview.length }} )
@@ -497,13 +498,18 @@
                   multiple
                 />
                 <div v-if="otherPhotoPreview.length != 0">
-                  <img
-                    v-for="photo in otherPhotoPreview"
-                    :key="photo.id"
-                    :src="photo.url"
-                    alt="preview"
-                    style="max-height: 100px; border-radius:4px;"
-                  />
+                  <v-row style="max-height: 200px;overflow: auto;">
+                    <v-col 
+                      style="padding:0.2em !important"
+                      v-for="photo in otherPhotoPreview" 
+                      :key="photo.id">
+                        <img
+                        :src="photo.url"
+                        alt="preview"
+                        style="max-height: 100px;"
+                        />
+                    </v-col>
+                  </v-row>
                 </div>
               </div>
             </v-card>
@@ -515,7 +521,7 @@
               @click="e1 = 7"
               text
             >
-              Previous
+              Vorige
             </v-btn>
             <v-btn
               style="
@@ -567,7 +573,7 @@
               @click="e1 = 8"
               text
             >
-              Previous
+              Vorige
             </v-btn>
 
             <v-btn
@@ -763,11 +769,10 @@ export default {
       var index = 1;
       this.otherImagesData.forEach((element) => {
         this.uploadOthers(element, index++);
-      });
-            
+      });   
         setTimeout(() => {
               this.e1 = 9;
-  }, 2000);
+        }, 2000);
     },
   },
 };

@@ -89,6 +89,11 @@
                 <v-expansion-panel-content>
                     <template>
                           <form method="POST" enctype="multipart/form-data" @submit.prevent="submitAccountData">
+                              <v-select
+                                :items="items"
+                                label="Emoties"
+                                v-model="accountData.emotions"
+                              ></v-select>
                               <v-text-field
                                 v-model="accountData.title"
                                 label="Zelfbeschrijvings woord"
@@ -270,6 +275,7 @@ import {TheMask} from 'vue-the-mask';
         ],
         data() {
             return {
+                items: [ 'respectabel','betrouwbaar' , 'autoriteit', 'schoon', 'modern', 'modieus', 'creatief', 'vriendelijk', 'gedurfd', 'krachtig'],
                 dialog: false,
                 color: '#1976D2FF',
 		            mask: '!#XXXXXXXX',
@@ -282,6 +288,7 @@ import {TheMask} from 'vue-the-mask';
                     specialization: this.user.specialization,
                 },
                 accountData: {
+                    emotions: this.user.emotions,
                     title: this.user.title,
                     shortdescription: this.user.shortdescription,
                     description: this.user.description,

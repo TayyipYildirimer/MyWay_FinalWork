@@ -1,9 +1,8 @@
 <template>
-  <div style="overflow:hidden;">
+  <div style="overflow:hidden;margin-top:7em;">
     <div style="position:relative">
       <div class="second-bgcolor">
       </div>
-      {{colors}}
       <v-stepper
         v-model="e6"
         vertical
@@ -40,7 +39,8 @@
               v-model="userData.category"
             />
             <v-row cols="12" style="border-radius:8px;margin-top: 0.5em; background-color: white;">
-              <h4 style="margin:1em;text-align:center;font-size:100%;width:100%;">MyWay heeft automatisch een kleurenpalet gegenereerd, alleen voor jou.<br> Je kunt de kleuren later nog aanpassen, maar we raden je aan om er eerst eens naar te kijken.</h4>
+              <h4 style="margin:1em;text-align:center;font-size:100%;width:100%;">MyWay heeft automatisch een kleurenpalet gegenereerd, alleen voor jou.<br>Deze kleuren worden gebruikt op jouw portfolio. 
+              <br>Je kunt de kleuren later nog aanpassen, maar we raden je aan om er eerst eens naar te kijken.</h4>
               <div style="display:flex;margin: 20px auto;height: 140px;">
                  <div :class="'palette color'+index" v-for="(element, index) in colorsArray" :key="index" :style="'background-color:#'+element">
 
@@ -155,7 +155,7 @@
             Continue
           </v-btn>
           <v-btn  @click="e6 = 1" text>
-            Cancel
+            Vorige
           </v-btn>
         </v-stepper-content>
         </form>
@@ -237,12 +237,20 @@
                               sm="6"
                               md="6"
                             >
+                            <v-tooltip bottom>
+                              <template v-slot:activator="{ on, attrs }">
                               <v-text-field
                                 color="#2ba9e1"
                                 autocomplete="false"
                                 label="Werkduur"
                                 v-model="projectData.werkduur"
+                                v-bind="attrs"
+                                v-on="on"
                               ></v-text-field>
+                              </template>
+                                <span>Je mag in gewenste vorm schrijven. <br>
+                                bv. "2 Weken"</span>
+                              </v-tooltip>
                             </v-col>
                             <v-col cols="12">
                               <v-textarea
@@ -255,6 +263,8 @@
                               ></v-textarea>
                             </v-col>
                             <v-col cols="12">
+                              <v-tooltip bottom>
+                              <template v-slot:activator="{ on, attrs }">
                               <v-text-field
                                 color="#2ba9e1"
                                 autocomplete="false"
@@ -262,7 +272,13 @@
                                 type="text"
                                 required
                                 v-model="projectData.url"
+                                v-bind="attrs"
+                                v-on="on"
                               ></v-text-field>
+                              </template>
+                                <span>Het is aangeraden om in deze vorm te schrijven; <br>
+                                "https://www..."</span>
+                              </v-tooltip>
                             </v-col>
                           </v-row>
                         </v-container>
@@ -312,7 +328,7 @@
               </v-row>
             </v-card>
           <v-btn  @click="e6 = 2" text>
-            Cancel
+            Vorige
           </v-btn>
             <v-btn
               class="second-continue"
@@ -347,8 +363,6 @@
             <v-row cols="12" style="border-radius:8px;margin-top: 0; background-color: white;">
               <h4 style="margin:1em;text-align:center;font-size:100%;width:100%;">
                 <span style="text-transform:capitalize;">{{authUser.fname}} {{authUser.lname}}</span> uw portfolio wordt gegenereerd zodra u op de knop <span style="font-weight:600;">portfolio genereren</span> drukt.<br>
-                Je ontvangt een proefversie 5 dagen, deze verloopt op: 
-                <span style="font-weight: 600;font-size: 110%;margin-top:1em;">{{expirationDate}}</span>.
               </h4>
               <v-row cols="12" style="max-width:100%;">
                 <img style="max-width:30%;margin:auto;text-align:center;" src="/images/calendar.gif">
@@ -365,7 +379,7 @@
             Portfolio Genereren
           </v-btn>
           <v-btn  @click="e6 = 3" text>
-            Cancel
+            Vorige
           </v-btn>
         </v-stepper-content>
       </v-stepper>

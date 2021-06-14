@@ -2,7 +2,7 @@
 
 @section('content')
 <div style="overflow:hidden;padding-bottom:0;">
-  <div class="container" style="padding-bottom:0;">
+  <div class="container" style="padding-bottom:0;margin-top:2em;">
       <v-row class="home-row" style=" height: 90vh;">
           <v-col class="home-col"style="margin:auto 0">
               <h3>
@@ -12,7 +12,7 @@
               <ul class="home-list">
                   <li><i class="fas fa-check small"></i> Perfect voor creatievelingen</li>
                   <li><i class="fas fa-check small"></i> Vereist geen voorkennis</li>
-                  <li><i class="fas fa-check small"></i> Beveiligd betalingsysteem</li>
+                  <li><i class="fas fa-check small"></i> Helemaal gratis</li>
               </ul>
               <v-btn href="{{ route('login') }}" elevation="2" color="#2BA9E1"
                   style="color:white;text-transform:inherit;padding:2.2em 0;border-radius:8px;text-decoration:none;min-width: 75%;">
@@ -42,7 +42,6 @@
               <ul style="margin:0 !important;" class="home-list">
                 <li><span style="font-weight:300:font-size:90%">Volgens hun</span></li>
                 <li><span class="home-list-item">Beroep</span></li>
-                <li><span class="home-list-item">Emoties</span></li>
                 <li><span class="home-list-item">Ervaring</span></li>
               </ul>
             </v-card-text>
@@ -157,29 +156,23 @@
           </v-col>
           <v-col md="2" class="home-col home-footer-col">
           <ul class="home-list">
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Product</a>
+              <li style="margin-top:1em !important;"><a href="/contact" class="home-footer-item">Product</a>
               </li>
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Prijzen</a>
-              </li>
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Platform</a>
+              <li style="margin-top:1em !important;"><a href="/search" class="home-footer-item">Platform</a>
               </li>
             </ul>
           </v-col>
           <v-col md="2" class="home-col home-footer-col">
           <ul class="home-list">
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Over ons</a>
+              <li style="margin-top:1em !important;"><a href="/contact" class="home-footer-item">Over ons</a>
               </li>
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Over MY WAY</a>
-              </li>
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Partner</a>
+              <li style="margin-top:1em !important;"><a href="/contact" class="home-footer-item">Over MY WAY</a>
               </li>
             </ul>
           </v-col>
           <v-col md="2" class="home-col home-footer-col">
           <ul class="home-list">
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Service</a>
-              </li>
-              <li style="margin-top:1em !important;"><a href="#" class="home-footer-item">Contact</a>
+              <li style="margin-top:1em !important;"><a href="/contact" class="home-footer-item">Contact</a>
               </li>
             </ul>
           </v-col>

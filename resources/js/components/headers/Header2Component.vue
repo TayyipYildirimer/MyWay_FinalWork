@@ -1,6 +1,6 @@
 
 <template>
-    <div class="container">
+    <div class="container" style="max-height:100vh;">
         <v-row class="header" md="12">
             <v-col md="6">
                 <div style="max-width: 70%;margin: 30% auto;">
@@ -24,12 +24,16 @@
             </v-col>
             <v-col md="6" style="display:flex;justify-content:center;">
                 <div style="">
-                  <div class="header1-bgcolor">
+                  <div :style="`background-color:#${user.imgColors[0]}`" class="header1-bgcolor">
                   </div>
                 </div>
                 <img :src="`${profileImg}`" alt="" style="min-height:350px;max-height:470px;justify-content:center;display:flex !important;align-items:center;margin-top: 13% !important;">
             </v-col>
         </v-row>
+        
+        <v-btn @click="windowScroll" outlined small fab class="mx-2 scrollBtn" :style="[colorDark ? {'background-color': `#${user.imgColors[colorDarkNumber]}`} : {'background-color': `#${user.imgColors[colorLightNumber]}`}]">
+          <i :style="[colorDark?{'color': 'white'}:{'color': 'black'}]" class="fas fa-angle-double-down"></i>
+        </v-btn>
     </div>
 </template>
 
@@ -50,6 +54,12 @@
             this.user.userPhoto.forEach(element => 
             console.log());
             console.log(this.user);
+        },
+        methods: {
+          windowScroll() {
+            let pageHeight = window.innerHeight;
+            window.scrollBy({top:pageHeight, left:0, behavior: 'smooth'});
+          },
         }
     }
 </script>
@@ -76,7 +86,6 @@ h1{
   position: absolute;
   margin-left: 0em !important;
   width: 37% !important;
-  background-color: lightsteelblue;
 }
 div button{
   font-weight: 500;
@@ -107,4 +116,10 @@ div button:hover{
   display: inline-block;
 }
 
+.scrollBtn{
+    z-index: 99;
+    position:fixed;
+    left:90%;
+    top:90%;
+}
 </style>

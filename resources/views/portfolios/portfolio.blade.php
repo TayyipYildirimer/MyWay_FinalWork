@@ -5,9 +5,15 @@
     <div style="width:100%;">
         <h3>
         <?php
-         $user->userPhoto = $userPhoto;
-         $user->project = $project;
-         $user->socialMedia = $socialMedia;
+        if($userPhoto){
+          $user->userPhoto = $userPhoto;
+        }
+        if($project){
+          $user->project = $project;
+        }
+        if($socialMedia){
+          $user->socialMedia = $socialMedia;
+        }
         ?>
         </h3>
         @if(Auth::check() && ($user->id == Auth::user()->id))

@@ -53,6 +53,9 @@ Vue.component('editable-component', require('./components/editable/EditableCompo
 /** Navigation component */
 Vue.component('nav-component', require('./components/NavComponent.vue').default);
 
+/** Contact My Way component */
+Vue.component('contact-component', require('./components/ContactComponent.vue').default);
+
 /** Form components */
 Vue.component('wizard-component', require('./components/WizardComponent.vue').default);
 Vue.component('wizard2-component', require('./components/Wizard2Component.vue').default);

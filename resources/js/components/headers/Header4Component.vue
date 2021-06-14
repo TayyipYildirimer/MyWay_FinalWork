@@ -60,6 +60,9 @@
                 </v-col>
             </v-row>
         </div>
+        <v-btn @click="windowScroll" outlined small fab class="mx-2 scrollBtn" :style="[colorDark ? {'background-color': `#${user.imgColors[colorDarkNumber]}`} : {'background-color': `#${user.imgColors[colorLightNumber]}`}]">
+          <i :style="[colorDark?{'color': 'white'}:{'color': 'black'}]" class="fas fa-angle-double-down"></i>
+        </v-btn>
     </div>
 </template>
 
@@ -100,7 +103,11 @@
         methods: {
           windowLocate() {
             window.location.href = `${this.user.socialMedia.other}`;
-          }
+          },
+          windowScroll() {
+            let pageHeight = window.innerHeight;
+            window.scrollBy({top:pageHeight, left:0, behavior: 'smooth'});
+          },
         }
     }
 </script>
@@ -222,10 +229,11 @@ h1{
 .header3-socialmedia ul li{
   display: inline;
 }
-/*.header3-socialmedia ul{
-  position: absolute;
-  right: 10%;
-  bottom: 3%;
-}*/
+.scrollBtn{
+    z-index: 99;
+    position:fixed;
+    left:90%;
+    top:90%;
+}
 
 </style>

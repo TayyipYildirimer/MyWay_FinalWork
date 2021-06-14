@@ -4,9 +4,6 @@
 <div  style="overflow:hidden;padding-bottom:0;">
   <div class="container">
       <div style="width:100%;z-index:-2;">
-        <a href="/">
-          <img src="/images/logo_white.png" style="width:10%;position:relative;left:45%;z-index:99;">
-        </a>
       </div>
       <!--<img style="max-width:300px;max-height:300px;" src="imageURL">
       foreach($colors as $color)

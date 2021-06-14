@@ -16,12 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-
-Auth::routes();
-
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/contact', function () {
+    return view('contact/contact');
+});
+Auth::routes();
 
 Route::get('/search', [App\Http\Controllers\SearchController::class, 'index'])->name('search');
 
