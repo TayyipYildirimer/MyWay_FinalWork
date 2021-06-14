@@ -42,7 +42,12 @@ Ga naar jouw browser en navigeer naar http://localhost:8000/
 
 ## Waar kan ik hulp vinden?
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Waar kan ik hulp vinden?
+* **https://laravel.com/**
+* **https://cli.vuejs.org/guide/**
+* **https://axios-http.com/docs/intro**
+* **https://vuetifyjs.com/en/getting-started/upgrade-guide/**
+* **https://firebase.google.com/docs/guides**
 
 ## Project status
 
