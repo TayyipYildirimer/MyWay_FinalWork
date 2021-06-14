@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/myway-86cfb.appspot.com/o/logotransparant.png?alt=media&token=e10c1620-7f9f-4caa-aafd-ac8c142aa37b" width="400"></a></p>
+<p align="center"><img src="https://firebasestorage.googleapis.com/v0/b/myway-86cfb.appspot.com/o/logotransparant.png?alt=media&token=e10c1620-7f9f-4caa-aafd-ac8c142aa37b" width="400"></p>
 
 ## MY WAY
 
@@ -12,10 +12,6 @@ webapplicatie ook een platform waar men creatieve geesten kunnen opzoeken.
 Vue.js 2.6.14
 Laravel 8.39.0
 npm 6.13.4
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 ## Getting started
 
